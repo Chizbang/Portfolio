@@ -32,9 +32,8 @@ app.config(function($locationProvider, $routeProvider, $stateProvider){
 		}
 	});
 
-	$stateProvider.state(['$register', '$http', 'pages', function(register, http, pages){
+	$stateProvider.state(['$register', 'pages', function(register, pages){
 		return pages.getPages().then(function(data){
-
 			for(state in data.data){
 				register(data.data[state].pagename, {
 					route: data.data[state].path,
@@ -47,11 +46,10 @@ app.config(function($locationProvider, $routeProvider, $stateProvider){
 });
 
 app.controller("mainController", function($scope){
-
 	var self = this;
 });
 
-app.controller("menuPages", function($scope, $http, pages){
+app.controller("menuPages", function($scope, pages){
 	var menu = this;
 	menu.list = [];
 
@@ -66,6 +64,7 @@ app.directive('side', function(){
 		templateUrl: 'templates/side.html'
 	}
 });
+
 app.filter('unsafe', function($sce){
 	return function(val){
 		return $sce.trustAsHtml(val);
