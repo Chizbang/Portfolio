@@ -4,13 +4,12 @@
 
 	class User{
 		public function __construct($uid){
-			print_r($this->populateUserWithTable($uid));
-
+			$this->uid = $uid;
 		}
 
-		public function populateUserWithTable($uid){
+		public function populateUserWithTable(){
 			$getUserQuery = new Database();
-			$result = $getUserQuery->fecthAllQuery("SELECT * FROM users WHERE uid = ?", array($uid));
+			$result = $getUserQuery->fecthAllQuery("SELECT * FROM users WHERE uid = ?", array($this->uid));
 
 			return $result;
 		}		
