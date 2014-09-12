@@ -1,0 +1,6 @@
+<div id="main" ng-controller="projectPageController as ctrlTable">
+	<div id="head-main"> <h1>Projects</h1> </div>
+	<div id="mainContent"> 
+		<div class="tableElement" ng-repeat="project in ctrlTable.projectsContent"><div class="projThumb" style="background-image: url('{{project.thumbnail}}');"></div><h1>{{project.title}}</h1><div class="projInfo"> <p ng-bind="project.info"></p> </div> </div></div>
+	</div>
+</div>

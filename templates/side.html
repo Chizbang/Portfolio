@@ -1,0 +1,18 @@
+<div id="side">
+	<div id="head-side"></div>
+
+	<div id="aboutme">
+	
+		<div id="avatar"></div>
+
+		<label id="name">James Heald</label>
+  	</div>
+
+	<div class="split"></div>
+
+	<div id="menu" ng-controller="menuPages as pagesAvail">
+		<ul>
+			<li ng-repeat="link in pagesAvail.list"><a href="#/{{link.path}}">{{link.dispname}}</a></li>
+		</ul>
+	</div>
+</div>

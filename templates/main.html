@@ -1,0 +1,7 @@
+<div id="main" ng-controller="primaryPageController as ctrlMain">
+	<div id="head-main"> <h1 ng-bind="ctrlMain.pageContent[0].title"></h1> </div>
+	
+	<div id="mainContent"> 
+		<p ng-bind-html="ctrlMain.pageContent[0].content | unsafe"></p>
+	</div>
+</div>

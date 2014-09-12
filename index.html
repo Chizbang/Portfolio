@@ -1,0 +1,20 @@
+<html ng-app="portfolio">
+	<head>
+		<title>James Heald - My Portfolio</title>
+
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+		<script src="scripts/angular-routing.min.js"></script>
+		
+		<script src="scripts/common.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/table.js"></script>
+	</head>
+	<body ng-controller="mainController as main">
+		<div id="container">
+			<side></side><main jem-view="main"></main>
+		</div>
+	</body>
+</html>
