@@ -11,8 +11,11 @@
 	<div class="split"></div>
 
 	<div id="menu" ng-controller="menuPages as pagesAvail">
-		<ul>
+		<ul id="menuLinks">
 			<li ng-repeat="link in pagesAvail.list"><a href="#/{{link.path}}">{{link.dispname}}</a></li>
+		</ul>
+		<ul id ="socialLinks">
+			<li><a href="http://github.com/chizbang/"><div id="github"></div></a></li><li><a href="https://twitter.com/jamertheprogram"><div id="twitter"></div></a></li><li><a href="http://chizbang.tumblr.com"><div id="tumblr"></div></a></li>
 		</ul>
 	</div>
 </div>
