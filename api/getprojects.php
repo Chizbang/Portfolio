@@ -1,8 +1,7 @@
 <?php
-	require_once("classes/database_class.php");
-	$getProjectsQuery = new Database();
+	require_once("classes/class_page.php");
+	$projects = new Page();
+	$allProjects = $projects->getAllProjects();
 
-	$result = $getProjectsQuery->fecthAllQuery("SELECT * FROM projects", array());
-
-	echo json_encode($result);
+	echo json_encode($allProjects);
 ?>

@@ -3,10 +3,11 @@
 		return;
 	}
 
-	require_once("classes/database_class.php");
+	require_once("classes/class_page.php");
+	$page = new Page();
 
-	$getPageContent = new Database();
-	$result = $getPageContent->fecthAllQuery("SELECT * FROM content WHERE name = ?", array($_GET['page']));
-	echo json_encode($result);
+	$pageContent = $page->getPageContent($_GET['page']);
+
+	echo json_encode($pageContent);
 
 ?>
