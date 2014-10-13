@@ -144,13 +144,13 @@ body{
 	line-height: 24px;
 }
 .projInfo{
-	width: 390px;
+	width: 350px;
 	display: block;
 	float: left;
 	overflow: auto;
 	padding: 6px;
 	padding-left: 1px;
-	margin-left: 15px;
+	margin-left: 14px;
 }
 .tableElement a{
 	line-height: 19px;
@@ -225,5 +225,18 @@ body{
 
 	#mainContent p{
 
+	}
+	.projThumb{
+		width:90px;
+		height:70px;
+	}
+
+	.tableElement a{
+		margin-left:8px;
+		width: 220px;
+	}
+	.projInfo{
+		width: 180px;
+		margin-left:8px;
 	}
 }
